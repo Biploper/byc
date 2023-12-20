@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="utils.css">
+  <link rel="stylesheet" href="style.css">
+  <script src="https://kit.fontawesome.com/9639067cfb.js" crossorigin="anonymous"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins&family=Roboto&display=swap" rel="stylesheet">
+  <link rel="icon" href="logo-black.png">
+  <title>Bipbloger | Embrace Masculinity, Reject Modernity</title>
+</head>
+
+<body>
+  <div id="header">
+    <nav>
+      <a href="index.html"><img src="logo-black.png" alt="logo" height="50" width="50"
+          style="border: 1px solid black;"></a>
+      <div class="nav-links" id="navLinks">
+        <i class="fa fa-times" onclick="hideMenu()"></i>
+        <ul>
+          <li><a href="index.html">HOME</a></li>
+          <li><a href="#about">ABOUT</a></li>
+          <li><a href="#services">SERVICES</a></li>
+          <li><a href="#contact">CONTACT</a></li>
+        </ul>
+      </div>
+      <i class="fa fa-bars" onclick="showMenu()"></i>
+    </nav>
+    <div class="container">
+      <h1>Get Started With Us!</h1>
+      <p>"Everybody has a right to make their own website"</p>
+      <button class="btn">Hire Us!</button>
+    </div>
+  </div>
+  <!-- Services -->
+  <div id="services">
+    <div class="container2">
+      <h2>Our Services</h2>
+      <p class="subtitle">Make a personal or business webiste!</p>
+      <div class="services-panel">
+           <div class="service-column">
+        <div class="service-title">Basic Service</div>
+        <div class="service-price">$99/month</div>
+        <ul class="service-features">
+            <li>Feature 1</li>
+            <li>Feature 2</li>
+            <li>Feature 3</li>
+        </ul>
+        <a href="#" class="btn">Get Started</a>
+    </div>
+
+    <div class="service-column">
+        <div class="service-title">Intermediate Service</div>
+        <div class="service-price">$199/month</div>
+        <ul class="service-features">
+            <li>Feature 1</li>
+            <li>Feature 2</li>
+            <li>Feature 3</li>
+            <li>Feature 4</li>
+        </ul>
+        <a href="#" class="btn">Get Started</a>
+    </div>
+
+    <div class="service-column">
+        <div class="service-title">Premium Service</div>
+        <div class="service-price">$299/month</div>
+        <ul class="service-features">
+            <li>Feature 1</li>
+            <li>Feature 2</li>
+            <li>Feature 3</li>
+            <li>Feature 4</li>
+            <li>Feature 5</li>
+        </ul>
+        <a href="#" class="btn">Get Started</a>
+    </div>
+</div>
+
+      
+    </div>
+  </div>
+</body>
+<script>
+  var navLinks = document.getElementById("navLinks");
+  function showMenu() {
+    navLinks.style.left = "0px";
+    navLinks.style.width = "200px";
+    navLinks.style.display = "block";
+  }
+  function hideMenu() {
+    navLinks.style.left = "-200px";
+  } 
+</script>
+
+</html>
