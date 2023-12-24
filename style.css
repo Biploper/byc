@@ -1,3 +1,97 @@
+/* Start of utils */
+@import url('https://fonts.googleapis.com/css2?family=Poppins&family=Roboto&display=swap');
+
+:root {
+    --main-bg-color: rgb(212, 175, 55);
+    --font1: 'Poppins', cursive;
+    --font2: 'Roboto', sans-serif;
+
+}
+
+.max-width-1 {
+    max-width: 80vw;
+}
+
+.max-width-2 {
+    max-width: 60vw;
+}
+
+.m-auto {
+    margin: auto;
+}
+
+.btn {
+     background-color: #9d00ff;
+         -webkit-border-radius: 2px;
+        border-radius: 2px; 
+        border: none;
+        color: white;
+        cursor: pointer;
+        display: inline-block;
+        font-family: var(--font2);
+        font-size: 15px;
+        padding: 11px 30px;
+        text-align: center;
+        text-decoration: none;
+        margin-top: 17px;
+        transition: 0.5s;
+}
+
+
+/* Animations for button  */
+@keyframes glowing {
+    25% {
+      background-color: #0518a8;
+      box-shadow: 0 0 5px #9d00ff;
+      color: white;
+    }
+    55% {
+      background-color: #f05d4f;
+      box-shadow: 0 0 15px  #1965e8;
+      color: white;
+    }
+    100% {
+      background-color: #9d00ff;
+      box-shadow: 0 0 5px #D7000F;
+      color: white;
+    }
+    50%{
+        transform: translateY(3px);
+        }
+    50% {
+            transform: translateY(-3px);
+        }
+  }
+
+  .btn {
+      animation: glowing 1300ms infinite;
+    
+}
+.btn2{
+    display: inline-block;
+    text-decoration: none;
+    color: #007bff;
+    border: 1px solid #007bff;
+    padding: 15px 34px;
+    font-size: 13px;
+    background: transparent;
+    position: relative;
+    cursor: pointer;
+    transition: 1s;
+  }
+  .btn2:hover{
+    border: 1px solid #007bff;
+    background: #007bff;
+    color: white;
+  }
+    .form-input{
+    padding: 5px 5px;
+    border: 2px solid black;
+    border-radius: 5px;
+    margin: 0 4px;
+    font-family: var(--font1);
+}
+/* End of utils */
 * {
   margin: 0;
   padding: 0;
