@@ -66,6 +66,23 @@
       animation: glowing 1300ms infinite;
     
 }
+.btn2{
+    display: inline-block;
+    text-decoration: none;
+    color: #007bff;
+    border: 1px solid #007bff;
+    padding: 15px 34px;
+    font-size: 13px;
+    background: transparent;
+    position: relative;
+    cursor: pointer;
+    transition: 1s;
+  }
+  .btn2:hover{
+    border: 1px solid #007bff;
+    background: #007bff;
+    color: white;
+  }
     .form-input{
     padding: 5px 5px;
     border: 2px solid black;
