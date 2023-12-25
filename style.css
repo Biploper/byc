@@ -1,4 +1,4 @@
-/* Start of utils */
+/* Utils start */
 @import url('https://fonts.googleapis.com/css2?family=Poppins&family=Roboto&display=swap');
 
 :root {
@@ -33,8 +33,10 @@
         padding: 11px 30px;
         text-align: center;
         text-decoration: none;
-        margin-top: 17px;
+        margin-top: 1px;
         transition: 0.5s;
+  
+
 }
 
 
@@ -78,6 +80,7 @@
     position: relative;
     cursor: pointer;
     transition: 1s;
+
   }
   .btn2:hover{
     border: 1px solid #007bff;
@@ -91,7 +94,8 @@
     margin: 0 4px;
     font-family: var(--font1);
 }
-/* End of utils */
+
+/* Utils end */
 * {
   margin: 0;
   padding: 0;
@@ -167,8 +171,31 @@ nav img {
 nav .fa {
   display: none;
 }
+.text-box{
+  color: white;
+  width: 90%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+}
+.text-box h1{
+  font-size: 62px;
+}
+.text-box p{
+margin: 10px 0 20px;
+font-size: 14px;
+color: #fff;
+}
 
-@media(max-width: 663px) {
+@media(max-width: 700px) {
+  .text-box h1 {
+    font-size: 35px;
+  }
+  .text-box p {
+    font-size: 15px;
+  }
   #navLinks {
     display: none;
     transition: 0.5s;
@@ -233,65 +260,15 @@ nav .fa {
   .nav-links ul {
     padding: 30px;
   }
-
-  .container {
-    margin-top: 70px;
+  .container .teams-panel {
+    flex-direction: column;
   }
-
-  .container h1 {
-    font-size: 41px;
-    color: White;
-  }
-
-  p {
-    font-size: 10px;
-  }
-
-  .btn {
-    font-size: 15px;
-  }
+  .container .services-panel{
+    flex-direction: column;
+}
 }
 
-@media(max-width: 460px) {
-  .container {
-    margin-top: 200px;
-  }
 
-  .container h1 {
-    font-size: 30px;
-    color: White;
-  }
-
-  p {
-    font-size: 10px;
-  }
-
-  .btn {
-    font-size: 15px;
-  }
-}
-
-.container {
-  width: auto;
-  height: auto;
-  margin-top: 100px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
-  padding: 30px;
-}
-
-h1 {
-  font-size: 62px;
-  color: White;
-}
-
-p {
-  color: white;
-  font: 30px;
-
-}
 
 /* Services  */
 #services {
@@ -299,7 +276,7 @@ p {
   padding: 50px 0;
 }
 
-.container2 {
+.container{
   justify-content: center;
   align-items: center;
   display: flex;
