@@ -87,6 +87,25 @@
     background: #007bff;
     color: white;
   }
+  
+  .btn3{
+    display: inline-block;
+    text-decoration: none;
+    color: white;
+    border: 1px solid white;
+    padding: 15px 34px;
+    font-size: 13px;
+    background: transparent;
+    position: relative;
+    cursor: pointer;
+    transition: 1s;
+  
+  }
+  .btn3:hover{
+    border: 1px solid #007bff;
+    background: #007bff;
+    color: white;
+  }
     .form-input{
     padding: 5px 5px;
     border: 2px solid black;
@@ -189,7 +208,7 @@ font-size: 14px;
 color: #fff;
 }
 
-@media(max-width: 700px) {
+@media(max-width: 600px) {
   .text-box h1 {
     font-size: 35px;
   }
@@ -260,12 +279,12 @@ color: #fff;
   .nav-links ul {
     padding: 30px;
   }
-  .container .teams-panel {
+  /* .container .teams-panel {
     flex-direction: column;
   }
   .container .services-panel{
     flex-direction: column;
-}
+} */
 }
 
 
@@ -304,6 +323,7 @@ h2 {
   justify-content: center;
   align-items: center;
   flex-direction: row;
+  flex-wrap: wrap;
 }
 
 
@@ -359,6 +379,7 @@ h2 {
   justify-content: center;
   align-items: center;
   flex-direction: row;
+  flex-wrap: wrap;
 }
 
 .teams-col {
@@ -373,15 +394,42 @@ h2 {
 .members-title {
   font-size: 20px;
 }
-
-.members-img img {
-  border-radius: 50%;
+.content i{
+  padding: 10px;
+  font-size: 20px;
+  color: white;
+}
+.members-img{
+  display: flex;
+  align-items: center ;
+  justify-content: center;
+  flex-direction: row;
+ position: relative;
+  width: 200px;
 
 }
-
-.content i {
-  padding: 10px;
-  margin-top: -30px;
+.members-img #pic{
+  display: block;
+  border-radius: 50%;
+  width: 100%;
+}
+.overlay{
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.6);
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column; 
+  opacity: 0;
+  transition: opacity 0.2s ease-in-out;
+}
+.overlay:hover{
+  opacity: 1;
 }
 /* Footer  */
 
@@ -389,7 +437,8 @@ h2 {
   background: linear-gradient(rgb(4 9 30 / 100%), rgb(4 9 30 / 100%));
   color: #fff;
   padding: 40px 0;
-  text-align: center;
+  text-align: center; 
+  width: 100%;
 }
 
 .footer-content {
