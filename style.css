@@ -8,6 +8,7 @@
 
 }
 
+
 .max-width-1 {
     max-width: 80vw;
 }
@@ -20,55 +21,7 @@
     margin: auto;
 }
 
-.btn {
-     background-color: #9d00ff;
-         -webkit-border-radius: 2px;
-        border-radius: 2px; 
-        border: none;
-        color: white;
-        cursor: pointer;
-        display: inline-block;
-        font-family: var(--font2);
-        font-size: 15px;
-        padding: 11px 30px;
-        text-align: center;
-        text-decoration: none;
-        margin-top: 1px;
-        transition: 0.5s;
-  
 
-}
-
-
-/* Animations for button  */
-@keyframes glowing {
-    25% {
-      background-color: #0518a8;
-      box-shadow: 0 0 5px #9d00ff;
-      color: white;
-    }
-    55% {
-      background-color: #f05d4f;
-      box-shadow: 0 0 15px  #1965e8;
-      color: white;
-    }
-    100% {
-      background-color: #9d00ff;
-      box-shadow: 0 0 5px #D7000F;
-      color: white;
-    }
-    50%{
-        transform: translateY(3px);
-        }
-    50% {
-            transform: translateY(-3px);
-        }
-  }
-
-  .btn {
-      animation: glowing 1300ms infinite;
-    
-}
 .btn2{
     display: inline-block;
     text-decoration: none;
@@ -79,7 +32,8 @@
     background: transparent;
     position: relative;
     cursor: pointer;
-    transition: 1s;
+    transition: 0.65s;
+    border-radius: 20px;
 
   }
   .btn2:hover{
@@ -106,13 +60,7 @@
     background: #007bff;
     color: white;
   }
-    .form-input{
-    padding: 5px 5px;
-    border: 2px solid black;
-    border-radius: 5px;
-    margin: 0 4px;
-    font-family: var(--font1);
-}
+    
 
 /* Utils end */
 * {
@@ -124,6 +72,7 @@
 html {
   scroll-behavior: smooth;
   cursor: pointer;
+  overflow-y: scroll;
 }
 
 body {
@@ -135,9 +84,9 @@ body {
   z-index: 1000;
   min-height: 100vh;
   width: 100%;
-  background-image: linear-gradient(rgb(4 9 30 / 70%), rgb(4 9 30 / 70%)), url('nyc.jpg');
-  background-position: center;
-  background-size: cover;
+   background-color: #042a7f;
+   background-repeat: no-repeat;
+
 
 }
 
@@ -167,7 +116,7 @@ nav img {
 }
 
 .nav-links ul li a {
-  color: #fff;
+  color: white;
   text-decoration: none;
   font-size: 13px;
   font-family: poppins;
@@ -177,7 +126,7 @@ nav img {
   content: "";
   width: 0%;
   height: 2px;
-  background: white;
+  background: #F44336;
   display: block;
   margin: auto;
   transition: 0.5s;
@@ -190,41 +139,101 @@ nav img {
 nav .fa {
   display: none;
 }
-.text-box{
-  color: white;
-  width: 90%;
+
+
+.mainbody {
+  /* background-color: red; */
+  display: flex;
+  justify-content: space-around;
+  flex-direction: row;
   position: absolute;
-  top: 50%;
+  top: 60%;
   left: 50%;
   transform: translate(-50%, -50%);
-  text-align: center;
+  width: 100%;
+  
+  
+}
+.heroimg img{
+  height: 200px;
+  border-radius: 20px;
+  transition: 0.5s;
+}
+.heroimg:hover img{
+  box-shadow: 15px 0px 20px rgb(0, 0, 0);
+}
+.text-box{
+  color: white;
+  display: inline-block;
+  text-align: left;
+  /* background-color: #bbb; */
+  
 }
 .text-box h1{
-  font-size: 62px;
+  font-size: 46px;
+  display: block;
+  color: white;
 }
 .text-box p{
 margin: 10px 0 20px;
 font-size: 14px;
-color: #fff;
+color: white;
+display: block;
+
 }
 
-@media(max-width: 600px) {
+@media(max-width: 767px) {
+  .mainbody{
+    top: 50%;
+    left: 50%;
+    justify-content: center;
+  }
+  .heroimg img{
+    display: none;
+    visibility: hidden;
+  }
+  #header{
+    min-height: 160vw;
+  }
+  .text-box{
+    left: 50%;
+  }
   .text-box h1 {
     font-size: 35px;
+    text-align: center;
   }
   .text-box p {
     font-size: 15px;
+    text-align: center;
+
+  }
+  .button2{
+    position: absolute;
+    top: 125%;
+    left: 50%;
+    transform: translate(-50% , -50%);
   }
   #navLinks {
     display: none;
     transition: 0.5s;
   }
+  .nav-links ul{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    
+  }
+  .nav-links ul li{
+    margin-top: 20px;
+  }
 
   .nav-links ul li a {
-    color: #fff;
+    color: white;
     text-decoration: none;
-    font-size: 13px;
+    font-size: 20px;
     font-family: poppins;
+    
   }
 
   .nav-links ul li a::after {
@@ -251,9 +260,9 @@ color: #fff;
 
   .nav-links {
     position: absolute;
-    background: linear-gradient(rgb(4 9 30 / 100%), rgb(4 9 30 / 100%));
-    height: 100vh;
-    width: 0px;
+    background: #F44336;
+    height: calc(100% + 55px);
+    width: 100%;
     top: 0;
     left: 0;
     text-align: left;
@@ -285,8 +294,14 @@ color: #fff;
   .container .services-panel{
     flex-direction: column;
 } */
+.testimonials .testimonials-panel{
+  flex-direction: column;
 }
-
+.testimonials-col img{
+  margin-left: 0px;
+  margin-right: 15px;
+}
+}
 
 
 /* Services  */
@@ -368,8 +383,10 @@ h2 {
   margin-bottom: 10px;
 }
 
+
 /* teams-section */
 #teams {}
+
 
 .teams-panel {
   max-width: 1200px;
@@ -393,11 +410,17 @@ h2 {
 
 .members-title {
   font-size: 20px;
+  margin-top: 8px;
 }
-.content i{
+.content2 i{
   padding: 10px;
   font-size: 20px;
   color: white;
+  transition: color 0.3s ease-in-out;
+}
+.content2 i:hover{
+  color: #55acee; 
+
 }
 .members-img{
   display: flex;
@@ -408,7 +431,7 @@ h2 {
   width: 200px;
 
 }
-.members-img #pic{
+#pic{
   display: block;
   border-radius: 50%;
   width: 100%;
@@ -419,7 +442,7 @@ h2 {
   left: 0;
   width: 100%;
   height: 100%;
-  background: rgba(0, 0, 0, 0.6);
+  background: rgba(0, 0, 0, 0.7);
   border-radius: 50%;
   display: flex;
   justify-content: center;
@@ -431,6 +454,74 @@ h2 {
 .overlay:hover{
   opacity: 1;
 }
+
+/* Testimonials */
+.testimonials-panel{
+  margin-top: 50px;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  flex-direction: row;
+  gap: 30px;
+  
+}
+.testimonials{
+  width: 80%;
+  margin: auto;
+  padding-top: 100px;
+  text-align: center;
+}
+.testimonials-col{
+  flex-basis: 40%;
+  border-radius: 10px;
+  margin-bottom: 5%;
+  text-align: left;
+  background: #F44336; 
+  padding: 25px;
+  cursor: pointer;
+  display: inline-block;
+
+}
+.testimonials-col img{
+  height: 50px;
+  margin-left: 5px;
+  margin-right: 30px;
+  border-radius: 50%;
+
+}
+.testimonials-col h3{
+  margin-top: 15px;
+  text-align: left;
+  color: white;
+}
+.testimonials-col p{
+  font-size: 20px;
+  padding: 0;
+  color: white;
+
+}
+.testimonials-col i{
+color: #fff;
+
+}
+#quote1 , #quote2{
+  font-size: 40px;
+}
+#quote1{
+  margin-bottom: 10px;
+}
+#quote2{
+   display: flex;
+   justify-content: flex-end;
+  
+  
+  
+}
+
+
+
+
+
 /* Footer  */
 
 .footer {
